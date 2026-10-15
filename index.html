@@ -1,11 +1,11 @@
 <!doctype html>
 <!--
-  Cashual ‚Äì Enable Banking redirect forwarder.
+  Cashual – Enable Banking redirect forwarder.
 
   Enable Banking only accepts https redirect URLs on a real domain, while
   Cashual runs on http://localhost:3000. This static page is registered as
   the redirect URL (hosted on GitHub Pages) and immediately forwards the
-  bank's query string (?code=‚Ä¶&state=‚Ä¶ or ?error=‚Ä¶) to the local app.
+  bank's query string (?code=…&state=… or ?error=…) to the local app.
 
   - The target is fixed, so the page can't be used as an open redirect.
   - location.replace() keeps the URL with the code out of the history.
@@ -23,7 +23,7 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'none'; script-src 'sha256-Tmpger8oOYDgKLQpI4sV/kAfCIZ2lzSw/liHNrge34A='; style-src 'unsafe-inline'"
     />
-    <title>Cashual ‚Äì sender dig tilbage</title>
+    <title>Cashual – sender dig tilbage</title>
     <style>
       body { font: 15px/1.5 system-ui, sans-serif; background: #000; color: #e5e5e5; display: grid; place-items: center; min-height: 100vh; margin: 0; padding: 16px; }
       main { max-width: 420px; text-align: center; }
@@ -32,8 +32,8 @@
   </head>
   <body>
     <main>
-      <p>Sender dig tilbage til Cashual‚Ä¶</p>
-      <p><small>Sker der ikke noget? Kontroll√©r at Cashual k√∏rer p√• <code>localhost:3000</code>, og genindl√¶s siden.</small></p>
+      <p>Sender dig tilbage til Cashual…</p>
+      <p><small>Sker der ikke noget? Kontrollér at Cashual kører på <code>localhost:3000</code>, og genindlæs siden.</small></p>
     </main>
     <script>
       location.replace("http://localhost:3000/api/bank/callback" + location.search)
